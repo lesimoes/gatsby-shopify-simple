@@ -2,8 +2,8 @@
   "name": "gatsby-starter-shopify",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "A fresh and simple Gatsby starter simpl.",
+  "author": "lesimoes <lesimoes0@gmail.com>",
   "license": "0BSD",
   "keywords": [
     "gatsby",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@sindresorhus/slugify": "^1.1.0",
+    "babel-plugin-styled-components": "^2.0.7",
     "debounce": "^1.2.1",
     "dotenv": "^10.0.0",
     "gatsby": "^4.0.2",
@@ -30,6 +31,7 @@
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-plugin-sitemap": "^5.0.0",
+    "gatsby-plugin-styled-components": "^5.15.0",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-source-shopify": "^6.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
@@ -42,6 +44,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "shopify-buy": "^2.11.0",
+    "styled-components": "^5.3.5",
+    "styled-reset": "^4.4.1",
     "urql": "^2.0.2"
   }
 }

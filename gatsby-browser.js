@@ -1,9 +1,17 @@
-import * as React from "react"
-import { StoreProvider } from "./src/context/store-context"
-import "./src/styles/reset.css"
-import "./src/styles/variables.css"
-import "./src/styles/global.css"
+import React from 'react';
+import { ProductContextProvider } from './src/context/ProductContext';
+import { CartContextProvider } from './src/context/CartContext';
+import { GlobalStyle } from './src/components/globalStyles';
 
 export const wrapRootElement = ({ element }) => (
-  <StoreProvider>{element}</StoreProvider>
-)
+  <ProductContextProvider>
+    <CartContextProvider>{element}</CartContextProvider>
+  </ProductContextProvider>
+);
+
+export const wrapPageElement = ({ element }) => (
+  <>
+    <GlobalStyle />
+    {element}
+  </>
+);
