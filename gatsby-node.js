@@ -27,14 +27,19 @@ exports.createPages = async ({ graphql, actions }) => {
       }
       
   `)
-  // Iterate over all products and create a new page using a template
-  // The product "handle" is generated automatically by Shopify
+  createPage({
+    path: `/products`,
+    component: path.resolve(`./src/templates/CatalogTemplate/CatatogTemplate.js`),
+    context: {
+      product: result.data.allShopifyProduct.edges,
+    },
+  })
   result.data.allShopifyProduct.edges.forEach(({ node }) => {
     createPage({
       path: `/products/${node.handle}`,
-      component: path.resolve(`./src/templates/ProductTemplate/index.js`),
+      component: path.resolve(`./src/templates/ProductTemplate/ProductTemplate.js`),
       context: {
-        product: node,
+        shopifyId: node.shopifyId,
       },
     })
   })
