@@ -21,18 +21,26 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               shopifyId
               handle
+              collections {
+                handle
+                shopifyId
+              }
             }
           }
         }
       }
       
   `)
-  createPage({
-    path: `/products`,
-    component: path.resolve(`./src/templates/CatalogTemplate/CatatogTemplate.js`),
-    context: {
-      product: result.data.allShopifyProduct.edges,
-    },
+  result.data.allShopifyProduct.edges.forEach(({ node }) => {
+    node.collections.forEach((collection) => {
+      createPage({
+        path: `/collections/${collection.handle}`,
+        component: path.resolve(`./src/templates/CatalogTemplate/CatatogTemplate.js`),
+        context: {
+          shopifyId: collection.shopifyId,
+        },
+      })
+    })
   })
   result.data.allShopifyProduct.edges.forEach(({ node }) => {
     createPage({

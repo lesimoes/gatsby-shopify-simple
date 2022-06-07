@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { HeaderWrapper } from './styles';
 import ProductContext from '../../context/ProductContext';
+import { Link } from 'gatsby';
 
 export default function CollectionMenu () {
 
@@ -8,8 +9,11 @@ export default function CollectionMenu () {
 
     return(
         <HeaderWrapper>
-            { collections.map(({title, shopifyId}) => (
-                <span key={shopifyId}>{title}</span>
+            { collections.map(({title, shopifyId, handle}) => (
+                <Link to={`/collections/${handle}`}>
+                     <span key={shopifyId}>{title}</span>
+                </Link>
+               
             )) }
         </HeaderWrapper>
     )

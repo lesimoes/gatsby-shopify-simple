@@ -27,7 +27,6 @@ export default ProductContext;
 
 export function ProductContextProvider({ children }) {
   const { allShopifyCollection } = useStaticQuery(query);
-  console.log(allShopifyCollection)
   return (
     <ProductContext.Provider
       value={{
