@@ -8,13 +8,16 @@ import {
   FiShoppingBag,
   FiSearch,
 } from "react-icons/fi"
+import { Link } from "gatsby"
 
 export default function Header() {
   return (
     <HeaderWrapper>
       <div>
         <LogoContainer>
-          <FiShoppingBag />
+          <Link to="/">
+            <FiShoppingBag />
+          </Link>
         </LogoContainer>
         <InputContainer>
           <input placeholder="O que você quer comprar hoje?"></input>
