@@ -69,4 +69,9 @@ export const ActionContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
+
+  svg:hover {
+      cursor: pointer;
+      color: lightgray;      
+  }
 `

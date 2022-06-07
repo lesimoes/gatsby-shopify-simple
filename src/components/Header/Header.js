@@ -6,7 +6,6 @@ import {
   FiHeart,
   FiUser,
   FiShoppingBag,
-  FiMenu,
   FiSearch,
 } from "react-icons/fi"
 
