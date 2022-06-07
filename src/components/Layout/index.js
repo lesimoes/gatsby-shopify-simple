@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ProductContextProvider } from '../../context/ProductContext';
-import CollectionMenu from '../CollectionMenu/CollectionMenu';
+import Header from '../Header/Header';
 import { LayoutWrapper } from './styles';
 
 const Layout = ({ children }) => {
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   return (
     <ProductContextProvider>
       <LayoutWrapper>
-      <CollectionMenu />
+        <Header />
         <main>{children}</main>
       </LayoutWrapper>
     </ProductContextProvider>

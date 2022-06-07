@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useContext } from 'react';
 import { HeaderWrapper } from './styles';
 import ProductContext from '../../context/ProductContext';
 

@@ -10,6 +10,9 @@ query MyQuery {
       shopifyId
       title
       productsCount
+      image {
+        originalSrc
+      }
     }
   }
 }
