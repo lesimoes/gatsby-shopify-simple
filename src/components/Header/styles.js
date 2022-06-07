@@ -2,20 +2,65 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
 
-
-    input {
-        width: 200px;
-        height: 20px;
-        font-size: 14px;
-        font-weight: 200;
-        border-radius: 2px;
-        border: 0 solid #c9c9c9;
-        background-color: #c9c9c9;
-    }
-
-    input::placeholder {
-        font-size: 14px;
-        text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    div {
+        display: flex;
+        align-items: center;
     }
 
 `
+
+export const LogoContainer = styled.div`
+  flex-grow: 0.4;
+
+  svg {
+    font-size: 28px;
+    padding: 0;
+  }
+`;
+
+export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+  margin: 0 2% 0 2%;
+
+  input {
+    height: 30px;
+    border: solid 1px #c9c9c9;
+    border-radius: 2px;  
+    font-size: 18px;
+    padding: 0 4px;
+    width: 80%;
+    border-right: none;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+  }
+
+  svg {
+    font-size: 18px;
+    height: 30px;
+    padding: 0 10px;
+    border: solid 1px #c9c9c9;
+    border-radius: 2px;
+    background-color: ${(props) => props.theme.gray2};
+  }
+
+  svg:hover {
+    cursor: pointer;
+    background-color: #c9c9c9;
+  }
+
+`;
