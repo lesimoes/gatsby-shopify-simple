@@ -12,7 +12,7 @@ export default function ProductTemplate ({ data }) {
                     <h1>Product - { data.shopifyProduct.title }</h1>
                 </div>
                 <div>
-                    <ImageGallery images={ data.shopifyProduct.images }/>
+                   <img src={data.shopifyProduct.images[0].src}/>
                 </div>
             </ProductWrapper>
         </Layout>

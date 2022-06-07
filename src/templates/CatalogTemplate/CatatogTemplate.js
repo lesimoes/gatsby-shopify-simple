@@ -1,12 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { ImageGallery, Layout } from "../../components"
+import { CatalogWrapper } from "./styles"
 
 export default function CatalogTemplate({ data }) {
 
   return (
       <Layout>
-          <ImageGallery images={data.shopifyCollection.products} />   
+        <CatalogWrapper>
+          <ImageGallery 
+            images={data.shopifyCollection.products}
+            linkPath='products'
+            />
+        </CatalogWrapper>   
       </Layout>
   )
 }

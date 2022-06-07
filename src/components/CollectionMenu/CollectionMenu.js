@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 export default function CollectionMenu () {
 
     const { collections } = useContext(ProductContext);
-
+    console.log(collections)
     return(
         <HeaderWrapper>
             { collections.map(({title, shopifyId, handle}) => (

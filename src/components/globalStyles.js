@@ -41,4 +41,9 @@ export const GlobalStyle = createGlobalStyle`
       list-style: disc;
     }
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `
