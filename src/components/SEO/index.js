@@ -18,13 +18,14 @@ export function SEO({ description, lang, meta = [], title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
+  const titles = description ? `%s | ${description}` : `%s`; 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={titles}
       meta={[
         {
           name: `description`,
