@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
-import { Layout, ImageGallery, SEO } from '../../components';
+import { Layout, SEO } from '../../components';
 import { ProductWrapper } from './styles';
 
 export default function ProductTemplate ({ data }) {

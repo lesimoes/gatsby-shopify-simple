@@ -3,6 +3,17 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const query = graphql`
 query MyQuery {
+  allShopifyProduct {
+    edges {
+      node {
+        handle
+        description
+        featuredImage {
+          originalSrc
+        }
+      }
+    }
+  }
   allShopifyCollection {
     nodes {
       description
@@ -26,11 +37,12 @@ const ProductContext = React.createContext(defaultState);
 export default ProductContext;
 
 export function ProductContextProvider({ children }) {
-  const { allShopifyCollection } = useStaticQuery(query);
+  const { allShopifyCollection, allShopifyProduct } = useStaticQuery(query);
+
   return (
     <ProductContext.Provider
       value={{
-        products: [],
+        products: allShopifyProduct.edges.map(({node}) => node),
         collections: allShopifyCollection.nodes.map(value => value),
       }}
     >

@@ -2,13 +2,18 @@ import { Link } from "gatsby"
 import React from "react"
 import { ImageGalleryWrapper } from "./style"
 
-export function ImageGallery({ images, linkPath }) {
+//TODO - should be ProductGallery 
+export function ImageGallery({ products = [], linkPath }) {
 
   return (
     <ImageGalleryWrapper>
-      { images.map(image => (
-        <Link to={`/${linkPath}/${image.handle}`} key={image.id}>
-            <img src={image.featuredImage.originalSrc} />
+      { products.map(product => (
+        <Link to={`/${linkPath}/${product.handle}`} key={product.id}>
+          <div>
+            <img src={product.featuredImage.originalSrc} />
+            <span>{product.title}</span>
+          </div>
+
         </Link>
       ))}
     </ImageGalleryWrapper>

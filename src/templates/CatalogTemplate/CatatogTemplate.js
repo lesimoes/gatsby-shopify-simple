@@ -11,7 +11,7 @@ export default function CatalogTemplate({ data }) {
         <SEO title="Categorias" description={data.shopifyCollection.handle}/>
         <CatalogWrapper>
           <ImageGallery 
-            images={data.shopifyCollection.products}
+            products={data.shopifyCollection.products}
             linkPath='products'
             />
         </CatalogWrapper>   
@@ -29,6 +29,12 @@ export const query = graphql`
       products {
         id
         handle
+        title
+        priceRangeV2 {
+          minVariantPrice {
+            amount
+          }
+        }
         featuredImage {
           originalSrc
         }
