@@ -3,15 +3,17 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.header`
 
     width: 100%;
-    height: 14vh;
-    border: 1px solid black;
+    height: 12vh;
     position: fixed;
     background-color: white;
+    box-shadow: 1px 1px 4px black;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    z-index: 1;
+
     div {
         display: flex;
         align-items: center;
@@ -22,9 +24,10 @@ export const HeaderWrapper = styled.header`
 export const LogoContainer = styled.div`
   flex-grow: 0.4;
 
-  svg {
-    font-size: 28px;
-    padding: 0;
+  img {
+    width: 160px;
+    height: 60px;
+    object-fit: cover;
   }
 `;
 
@@ -69,6 +72,7 @@ export const ActionContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
+  padding: 0 0;
 
   svg:hover {
       cursor: pointer;

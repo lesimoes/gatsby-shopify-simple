@@ -5,7 +5,6 @@ import {
   FiShoppingCart,
   FiHeart,
   FiUser,
-  FiShoppingBag,
   FiSearch,
 } from "react-icons/fi"
 import { Link } from "gatsby"
@@ -16,7 +15,7 @@ export default function Header() {
       <div>
         <LogoContainer>
           <Link to="/">
-            <FiShoppingBag />
+            <img src="/logo.png" alt="logo"/>
           </Link>
         </LogoContainer>
         <InputContainer>

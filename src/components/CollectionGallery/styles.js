@@ -5,13 +5,15 @@ export const CollectionWrapper = styled.section`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex: 0 0 33.333333%;
     
     img {
-        width: 380px;
+        width: 100%;
         height: 220px;
         object-fit: cover;
         opacity: 1;
-        border: 1px solid gray
+        border: 1px solid gray;
+        padding: 0 0;
     }
 
     img:hover {
@@ -24,6 +26,7 @@ export const CollectionWrapper = styled.section`
 
     div {
         position: relative;
+        flex-grow: 3;
     }
 
     h5 {
@@ -33,6 +36,13 @@ export const CollectionWrapper = styled.section`
         font-size: 32px;
         font-weight: bold;
         color: white;
+    }
+
+    @media (max-width: 780px) {
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
     }
     
 `
